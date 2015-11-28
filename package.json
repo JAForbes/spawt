@@ -1,0 +1,11 @@
+{
+  "name": "spawt",
+  "version": "0.0.0",
+  "description": "Spawn commands in a cross platform manner.  Good spawt!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "james.a.forbes@gmail.com <=> (http://james-forbes.com)",
+  "license": "ISC"
+}
