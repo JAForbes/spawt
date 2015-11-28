@@ -1,5 +1,4 @@
 Spawt
-
 =====
 
 `spawt('npm run x')` instead of `spawn(npm.cmd, ['run', 'x'])`
