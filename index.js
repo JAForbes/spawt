@@ -8,14 +8,14 @@ function run(string, options, attempt){
 	var file = parts[0]
 	var args = parts.slice(1)
 	
-	return spawn(file, args)
-		.on('error', function(e){
+	var cp = spawn(file, args)
+		cp.on('error', function(e){
 			if(e.code == 'ENOENT' && attempt.length){
 				var extension = attempt.shift()
 				run(file+'.'+extension + ' ' + args.join(' '), options, attempt)
 			}
 		})
-	
+	return cp
 }
 
 module.exports = run
