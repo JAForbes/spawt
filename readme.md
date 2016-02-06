@@ -29,14 +29,16 @@ It also will try some common (and customizable) file extensions to try if the in
 `spawt` also returns the underlying child_process object, so you can listen to `error` and `message` events as if you
 want to do it manually.
 
+`spawt` will add the extension `.cmd` on windows automatically, and use no extension on any other os.
+This is inline with npm's standard bin generation feature.
+
 API
 ---
 
-`spawt(command: String, [options: {}, attempt: ['cmd','exe']])`
+`spawt(command: String, options: {})`
 
 - `command` The command to run (e.g. `npm run whatever`)
 - `options` Options to pass to the underlying child_process object
-- `attempt` A list of file extensions to attempt if the bare filename is not found (A windows thing mostly)
 
 Returns [`child_process`](https://nodejs.org/api/child_process.html#child_process_child_process_spawn_command_args_options)
 
